@@ -60,7 +60,7 @@
         android:layout_marginStart="@dimen/user_info_margin"
         android:text="@string/follow"
         app:layout_constraintBottom_toBottomOf="@id/profile_pic"
-        app:layout_constraintEnd_toStartOf="@+id/guideline_end_32"
+        app:layout_constraintEnd_toStartOf="@+id/reels_info_barrier"
         app:layout_constraintStart_toEndOf="@+id/username_text"
         app:layout_constraintTop_toTopOf="@id/profile_pic"
         tools:ignore="TouchTargetSizeCheck" />
@@ -68,10 +68,11 @@
     <TextView
         android:id="@+id/reels_description_text"
         style="@style/text_reels_description"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="30dp"
         android:layout_marginBottom="10dp"
         android:text="@string/reels_description_example"
+        app:layout_constraintEnd_toStartOf="@id/reels_info_barrier"
         app:layout_constraintBottom_toTopOf="@id/music_icon"
         app:layout_constraintStart_toStartOf="@id/guideline_start" />
 
@@ -90,11 +91,11 @@
     <TextView
         android:id="@+id/used_audio_text"
         style="@style/text_used_audio"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="@dimen/description_text_views_height"
         android:layout_marginStart="4dp"
         android:text="@string/used_audio_example"
-        app:layout_constraintEnd_toEndOf="@+id/guideline_end_32"
+        app:layout_constraintEnd_toStartOf="@+id/reels_info_barrier"
         app:layout_constraintStart_toEndOf="@+id/music_icon"
         app:layout_constraintTop_toTopOf="@id/music_icon" />
 
@@ -194,14 +195,14 @@
         android:layout_height="wrap_content"
         app:barrierDirection="end"
         app:barrierMargin="10dp"
-        app:constraint_referenced_ids="reels_description_text,follow_btn" />
+        app:constraint_referenced_ids="reels_description_text,follow_btn, used_audio_text" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/user_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"
-        app:constraint_referenced_ids="profile_pic, username_text, follow_btn" />
+        app:constraint_referenced_ids="profile_pic, username_text" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/feedback_functions_group"
