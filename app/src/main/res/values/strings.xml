@@ -14,4 +14,12 @@
     <string name="comment_btn_content_description">Comment</string>
     <string name="comments_number_example">110</string>
     <string name="share_btn_content_description">Share</string>
+    <string name="settings">Settings</string>
+    <string name="archive">Archive</string>
+    <string name="activity">Your activity</string>
+    <string name="qr_code">QR code</string>
+    <string name="saved">Saved</string>
+    <string name="close_friends">Close friends</string>
+    <string name="discover_people">Discover people</string>
+    <string name="covid_info_center">Covid-19 Information Center</string>
 </resources>
