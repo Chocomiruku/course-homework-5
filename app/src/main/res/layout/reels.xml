@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/reels_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/reels_preview_content_description"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reels_preview" />
+
+    <TextView
+        android:id="@+id/reels_text"
+        style="@style/text_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reels_label"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@id/guideline_top" />
+
+    <ImageView
+        android:id="@+id/profile_pic"
+        android:layout_width="@dimen/profile_pic_dimens"
+        android:layout_height="@dimen/profile_pic_dimens"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/profile_pic_content_description"
+        android:src="@drawable/profile_pic"
+        app:layout_constraintBottom_toTopOf="@id/reels_description_text"
+        app:layout_constraintEnd_toStartOf="@+id/username_text"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/guideline_start" />
+
+    <TextView
+        android:id="@+id/username_text"
+        style="@style/text_medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/user_info_margin"
+        android:text="@string/username_example"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic"
+        app:layout_constraintEnd_toStartOf="@+id/follow_btn"
+        app:layout_constraintStart_toEndOf="@+id/profile_pic"
+        app:layout_constraintTop_toTopOf="@id/profile_pic" />
+
+    <Button
+        android:id="@+id/follow_btn"
+        style="@style/btn_follow"
+        android:layout_width="@dimen/follow_btn_width"
+        android:layout_height="@dimen/follow_btn_height"
+        android:layout_marginStart="@dimen/user_info_margin"
+        android:text="@string/follow"
+        app:layout_constraintBottom_toBottomOf="@id/profile_pic"
+        app:layout_constraintEnd_toStartOf="@+id/reels_info_barrier"
+        app:layout_constraintStart_toEndOf="@+id/username_text"
+        app:layout_constraintTop_toTopOf="@id/profile_pic"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/reels_description_text"
+        style="@style/text_reels_description"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:text="@string/reels_description_example"
+        app:layout_constraintEnd_toStartOf="@id/reels_info_barrier"
+        app:layout_constraintBottom_toTopOf="@id/music_icon"
+        app:layout_constraintStart_toStartOf="@id/guideline_start" />
+
+    <ImageView
+        android:id="@+id/music_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/music_icon_content_description"
+        app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
+        app:layout_constraintEnd_toStartOf="@+id/used_audio_text"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:srcCompat="@drawable/ic_music_note_filled" />
+
+    <TextView
+        android:id="@+id/used_audio_text"
+        style="@style/text_used_audio"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/description_text_views_height"
+        android:layout_marginStart="4dp"
+        android:text="@string/used_audio_example"
+        app:layout_constraintEnd_toStartOf="@+id/reels_info_barrier"
+        app:layout_constraintStart_toEndOf="@+id/music_icon"
+        app:layout_constraintTop_toTopOf="@id/music_icon" />
+
+    <ImageView
+        android:id="@+id/camera_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/camera_content_description"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_32"
+        app:layout_constraintTop_toTopOf="@id/guideline_top"
+        app:layout_constraintVertical_chainStyle="spread_inside"
+        app:srcCompat="@drawable/ic_camera" />
+
+    <ImageView
+        android:id="@+id/like_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/like_btn_content_description"
+        app:layout_constraintBottom_toTopOf="@+id/likes_number_text"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_32"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/reels_info_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/camera_icon"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/ic_like_filled" />
+
+    <TextView
+        android:id="@+id/likes_number_text"
+        style="@style/text_reels_description"
+        android:layout_width="@dimen/count_labels_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="@string/likes_number_example"
+        app:layout_constraintBottom_toTopOf="@+id/comment_icon"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_20"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/reels_info_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/like_icon" />
+
+    <ImageView
+        android:id="@+id/comment_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/comment_btn_content_description"
+        app:layout_constraintBottom_toTopOf="@+id/comments_number_text"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_32"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/reels_info_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/likes_number_text"
+        app:srcCompat="@drawable/ic_comment" />
+
+    <TextView
+        android:id="@+id/comments_number_text"
+        style="@style/text_reels_description"
+        android:layout_width="@dimen/count_labels_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/comments_number_example"
+        app:layout_constraintBottom_toTopOf="@+id/share_icon"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_11"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/reels_info_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/comment_icon" />
+
+    <ImageView
+        android:id="@+id/share_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:contentDescription="@string/share_btn_content_description"
+        app:layout_constraintBottom_toTopOf="@+id/options_icon"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_32"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/reels_info_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/comments_number_text"
+        app:srcCompat="@drawable/ic_share" />
+
+    <ImageView
+        android:id="@+id/options_icon"
+        android:layout_width="@dimen/options_icon_width"
+        android:layout_height="@dimen/options_icon_height"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/share_btn_content_description"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="@+id/follow_btn"
+        app:layout_constraintEnd_toStartOf="@id/guideline_end_32"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toEndOf="@id/reels_info_barrier"
+        app:layout_constraintTop_toBottomOf="@+id/share_icon"
+        app:srcCompat="@drawable/ic_options" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/reels_info_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:barrierMargin="10dp"
+        app:constraint_referenced_ids="reels_description_text,follow_btn, used_audio_text" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/user_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="profile_pic, username_text, follow_btn" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/feedback_functions_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="like_icon, likes_number_text, comment_icon, comments_number_text, share_icon" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="23dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end_11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="11dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="50dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="39dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="profile_pic_dimens">45dp</dimen>
+    <dimen name="follow_btn_width">83dp</dimen>
+    <dimen name="follow_btn_height">27dp</dimen>
+    <dimen name="options_icon_height">35dp</dimen>
+    <dimen name="count_labels_width">50dp</dimen>
+    <dimen name="description_text_views_height">30dp</dimen>
+    <dimen name="user_info_margin">12dp</dimen>
+    <dimen name="options_icon_width">28dp</dimen>
+    <dimen name="drawable_padding">18dp</dimen>
+    <dimen name="margin_bottom_menu_item">37dp</dimen>
+    <dimen name="linear_horizontal_padding">22dp</dimen>
+    <dimen name="linear_top_padding">54dp</dimen>
+</resources>
